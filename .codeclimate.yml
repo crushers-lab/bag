@@ -4,3 +4,8 @@ plugins:
     config: tslint.json
   nodesecurity:
     enabled: true
+exclude_patterns:
+- "lib/"
+- "tests/"
+- "docs/"
+- "coverage/"
