@@ -1,6 +1,6 @@
-import IQueue from "./IQueue";
-import EmptyCollectionException from "../exceptions/EmptyCollection";
 import {AbstractCollection} from "../Collection";
+import {EmptyCollectionException} from "../exceptions";
+import IQueue from "./IQueue";
 
 /**
  * @class Implementation of Queue data structure
@@ -25,6 +25,16 @@ import {AbstractCollection} from "../Collection";
 class Queue<Type> extends AbstractCollection<Type> implements IQueue<Type> {
 
     /**
+     * Max empty values that are allowed after that _queue will be re constructed
+     */
+    public static MAX_EMPTY: number = 1000;
+
+    /**
+     * Default size of queue
+     */
+    public static DEFAULT_SIZE: number = 10;
+
+    /**
      * To store the elements in array
      */
     private _queue: Type[];
@@ -43,16 +53,6 @@ class Queue<Type> extends AbstractCollection<Type> implements IQueue<Type> {
      * To store the left index
      */
     private _left: number = 0;
-
-    /**
-     * Max empty values that are allowed after that _queue will be re constructed
-     */
-    public static MAX_EMPTY: number = 1000;
-
-    /**
-     * Default size of queue
-     */
-    public static DEFAULT_SIZE: number = 10;
 
     /**
      * @param size  Size of the queue.
@@ -92,19 +92,6 @@ class Queue<Type> extends AbstractCollection<Type> implements IQueue<Type> {
     }
 
     /**
-     * Removes unused elements and resets the values to front
-     */
-    private copyToBeginning() {
-        const queue: Type[] = this.entries();
-        const size = this.size();
-        for (let i = 0; i < size; i++) {
-            this._queue[i] = queue[i];
-        }
-        this._left = 0;
-        this._right = size;
-    }
-
-    /**
      * Reset array
      */
     public clear(): void {
@@ -139,6 +126,19 @@ class Queue<Type> extends AbstractCollection<Type> implements IQueue<Type> {
         queue._right = this._right;
         queue._queue = [...this._queue];
         return queue;
+    }
+
+    /**
+     * Removes unused elements and resets the values to front
+     */
+    private copyToBeginning() {
+        const queue: Type[] = this.entries();
+        const size = this.size();
+        for (let i = 0; i < size; i++) {
+            this._queue[i] = queue[i];
+        }
+        this._left = 0;
+        this._right = size;
     }
 }
 

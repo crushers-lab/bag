@@ -1,21 +1,17 @@
 import ICollection from "./ICollection";
 import Iterator from "./Iterator";
-
 /**
  * @class  Collections can implement this as a base class and override methods
  */
-abstract class AbstractCollection<Type> implements ICollection<Type> {
-
+declare abstract class AbstractCollection<Type> implements ICollection<Type> {
     /**
      * @returns {Type[]} collection as array
      */
-    public abstract entries(): Type[];
-
+    abstract entries(): Type[];
     /**
      * @returns {number} size of collection
      */
-    public abstract size(): number;
-
+    abstract size(): number;
     /**
      * ES5 iterator so that collection can be used in for loop
      * @yields yields a value from collection
@@ -30,32 +26,20 @@ abstract class AbstractCollection<Type> implements ICollection<Type> {
      *  }
      *  ```
      */
-    public* [Symbol.iterator]() {
-        const data: Type[] = this.entries();
-        const size: number = this.size();
-        for (let i = 0; i < size; i++) {
-            yield data[i];
-        }
-    }
-
+    [Symbol.iterator](): IterableIterator<Type>;
     /**
      * Get iterator instance for collection
      * @returns {Iterator<Type>} returns iterator
      */
-    public getIterator(): Iterator<Type> {
-        return new Iterator<Type>(this);
-    }
-
+    getIterator(): Iterator<Type>;
     /**
      * Clear a collection
      */
-    public abstract clear(): void;
-
+    abstract clear(): void;
     /**
      * Clone a collection
      * @returns {ICollection<Type>}
      */
-    public abstract clone(): ICollection<Type>;
+    abstract clone(): ICollection<Type>;
 }
-
 export default AbstractCollection;

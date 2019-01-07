@@ -1,5 +1,2 @@
 import Queue from "./queue";
-
-export {
-    Queue,
-};
+export { Queue, };

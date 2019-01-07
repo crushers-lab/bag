@@ -1,7 +1,5 @@
-import {EmptyCollectionException, OutOfBoundsException} from "../exceptions";
 import ICollection from "./ICollection";
 import IIterator from "./IIterator";
-
 /**
  * @class Generic iterator
  * @example
@@ -22,98 +20,56 @@ import IIterator from "./IIterator";
  * }
  * ```
  */
-class Iterator<Type> implements IIterator<Type> {
-    private readonly _data: Type[];
-    private readonly _length: number;
-    private _index: number = 0;
-    private _current: Type | undefined = undefined;
-
+declare class Iterator<Type> implements IIterator<Type> {
+    private readonly _data;
+    private readonly _length;
+    private _index;
+    private _current;
     /**
      * @constructor Takes collection to make a iterable
      * @param collection
      */
-    constructor(collection: ICollection<Type>) {
-        this._data = collection.entries();
-        this._length = collection.size();
-    }
-
+    constructor(collection: ICollection<Type>);
     /**
      * @property specifies the length of iterable
      */
-    public get length() {
-        return this._length;
-    }
-
+    readonly length: number;
     /**
      * @property current index of iterable
      */
-    public get index() {
-        return this._index;
-    }
-
+    readonly index: number;
     /**
      * @property to access the current element in iterable
      */
-    public get current() {
-        return this._current;
-    }
-
+    readonly current: Type | undefined;
     /**
      * @function To check if next element is available
      * @returns {boolean}
      */
-    public hasNext(): boolean {
-        return this.index < this.length;
-    }
-
+    hasNext(): boolean;
     /**
      * @function To check if prev element is available
      * @returns {boolean}
      */
-    public hasPrev(): boolean {
-        return this.index > 0;
-    }
-
+    hasPrev(): boolean;
     /**
      * @function get next element in iterable
      * @throws EmptyCollectionException if there are no elements in iterable
      * @throws OutOfBoundsException if there is no next element available
      * @returns {Type} next element in the iterable
      */
-    public next(): Type {
-        this._assertNotEmpty();
-        if (!this.hasNext()) {
-            throw new OutOfBoundsException();
-        }
-        return this._current = this._data[this._index++];
-    }
-
+    next(): Type;
     /**
      * @function get prev element in iterable
      * @throws EmptyCollectionException if there are no elements in iterable
      * @throws OutOfBoundsException if there is no prev element available
      * @returns {Type} prev element in the iterable
      */
-    public prev(): Type {
-        this._assertNotEmpty();
-        if (!this.hasPrev()) {
-            throw new OutOfBoundsException();
-        }
-        return this._current = this._data[--this._index];
-    }
-
+    prev(): Type;
     /**
      * @function reset the iterable to first position
      */
-    public reset(): void {
-        this._index = 0;
-    }
-
-    private _assertNotEmpty() {
-        if (this.length === 0) {
-            throw new EmptyCollectionException();
-        }
-    }
+    reset(): void;
+    private _assertNotEmpty;
 }
-
 export default Iterator;
