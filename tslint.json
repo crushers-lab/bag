@@ -10,8 +10,5 @@
       true,
       "allow-leading-underscore"
     ]
-  },
-  "rulesDirectory": [
-    "src/"
-  ]
+  }
 }
