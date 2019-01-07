@@ -1,0 +1,41 @@
+{
+  "name": "@crushers/bag",
+  "version": "0.0.1",
+  "description": "Collection of datastructures in node",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "repository": "git@github.com:crushers-lab/bag.git",
+  "author": "Deepak Kumar T P <deepak.kumar13245@gmail.com>",
+  "license": "GPL",
+  "private": true,
+  "crushers": {
+    "type": "lib"
+  },
+  "scripts": {
+    "tslint-fix": "tslint --project ./ --fix",
+    "build": "rimraf lib && tsc",
+    "docs": "typedoc --out ./docs ./src --name 'Bag - Datastructures'",
+    "benchmark": "ts-node ./tests/benchmarks/index.ts"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "log4js": "^3.0.6"
+  },
+  "devDependencies": {
+    "@types/benchmark": "^1.0.31",
+    "@types/core-js": "^2.5.0",
+    "@types/jest": "^23.3.12",
+    "@types/lodash": "^4.14.117",
+    "@types/microtime": "^2.1.0",
+    "@types/node": "^10.12.0",
+    "benchmark": "^2.1.4",
+    "jest": "^23.6.0",
+    "microtime": "^2.1.8",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typedoc": "^0.14.0",
+    "typescript": "^3.1.3"
+  }
+}
