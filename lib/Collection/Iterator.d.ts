@@ -21,15 +21,6 @@ import IIterator from "./IIterator";
  * ```
  */
 declare class Iterator<Type> implements IIterator<Type> {
-    private readonly _data;
-    private readonly _length;
-    private _index;
-    private _current;
-    /**
-     * @constructor Takes collection to make a iterable
-     * @param collection
-     */
-    constructor(collection: ICollection<Type>);
     /**
      * @property specifies the length of iterable
      */
@@ -42,6 +33,15 @@ declare class Iterator<Type> implements IIterator<Type> {
      * @property to access the current element in iterable
      */
     readonly current: Type | undefined;
+    private readonly _data;
+    private readonly _length;
+    private _index;
+    private _current;
+    /**
+     * @constructor Takes collection to make a iterable
+     * @param collection
+     */
+    constructor(collection: ICollection<Type>);
     /**
      * @function To check if next element is available
      * @returns {boolean}
@@ -70,6 +70,14 @@ declare class Iterator<Type> implements IIterator<Type> {
      * @function reset the iterable to first position
      */
     reset(): void;
+    /**
+     * @function move to end of collection
+     */
+    end(): void;
+    /**
+     * @function move to beginning of collection
+     */
+    start(): void;
     private _assertNotEmpty;
 }
 export default Iterator;

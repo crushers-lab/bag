@@ -41,5 +41,10 @@ declare abstract class AbstractCollection<Type> implements ICollection<Type> {
      * @returns {ICollection<Type>}
      */
     abstract clone(): ICollection<Type>;
+    /**
+     * @function check if collection is empty
+     * @return {boolean} true if empty
+     */
+    isEmpty(): boolean;
 }
 export default AbstractCollection;

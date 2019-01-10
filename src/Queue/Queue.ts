@@ -69,13 +69,14 @@ class Queue<Type> extends AbstractCollection<Type> implements IQueue<Type> {
      * @throws EmptyCollectionException if there are no elements in array
      */
     public dequeue(): Type {
-        if (this._left > this._right) {
-            if (this._right > -1) {
-                this.clear();
-            }
+        if (this.isEmpty()) {
             throw new EmptyCollectionException();
         }
-        return this._queue[this._left++];
+        const item = this._queue[this._left++];
+        if (this.isEmpty() && this._right > -1) {
+            this.clear();
+        }
+        return item;
     }
 
     /**
@@ -114,7 +115,7 @@ class Queue<Type> extends AbstractCollection<Type> implements IQueue<Type> {
         if (this.size() === 0) {
             return [];
         }
-        return this._queue.slice(this._left, this._right + 1);
+        return this._queue.slice(this._left, this._left + this.size());
     }
 
     /**

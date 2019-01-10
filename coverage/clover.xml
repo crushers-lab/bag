@@ -1,154 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1546899876475" clover="3.2.0">
-  <project timestamp="1546899876475" name="All files">
-    <metrics statements="110" coveredstatements="93" conditionals="26" coveredconditionals="11" methods="28" coveredmethods="23" elements="164" coveredelements="127" complexity="0" loc="110" ncloc="110" packages="4" files="9" classes="9">
+<coverage generated="1547142729965" clover="3.2.0">
+  <project timestamp="1547142729965" name="All files">
+    <metrics statements="156" coveredstatements="155" conditionals="32" coveredconditionals="29" methods="41" coveredmethods="41" elements="229" coveredelements="225" complexity="0" loc="156" ncloc="156" packages="5" files="11" classes="11">
       <package name="src">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/index.ts">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
         </file>
       </package>
       <package name="src.Collection">
-        <metrics statements="48" coveredstatements="44" conditionals="6" coveredconditionals="3" methods="14" coveredmethods="13"/>
+        <metrics statements="58" coveredstatements="58" conditionals="6" coveredconditionals="6" methods="17" coveredmethods="17"/>
         <file name="AbstractCollection.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Collection/AbstractCollection.ts">
-          <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-          <line num="2" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
-          <line num="36" count="100" type="stmt"/>
-          <line num="37" count="100" type="stmt"/>
-          <line num="45" count="1" type="stmt"/>
-          <line num="46" count="2" type="stmt"/>
-          <line num="59" count="1" type="stmt"/>
-          <line num="61" count="1" type="stmt"/>
+          <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="33" count="2" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
+          <line num="36" count="200" type="stmt"/>
+          <line num="37" count="200" type="stmt"/>
+          <line num="45" count="2" type="stmt"/>
+          <line num="46" count="6" type="stmt"/>
+          <line num="64" count="2" type="stmt"/>
+          <line num="65" count="101" type="stmt"/>
+          <line num="67" count="2" type="stmt"/>
+          <line num="69" count="2" type="stmt"/>
         </file>
         <file name="Iterator.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Collection/Iterator.ts">
-          <metrics statements="33" coveredstatements="29" conditionals="6" coveredconditionals="3" methods="11" coveredmethods="10"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="29" count="2" type="stmt"/>
-          <line num="36" count="2" type="stmt"/>
+          <metrics statements="41" coveredstatements="41" conditionals="6" coveredconditionals="6" methods="13" coveredmethods="13"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="31" count="2016" type="stmt"/>
           <line num="37" count="2" type="stmt"/>
-          <line num="43" count="1" type="stmt"/>
-          <line num="44" count="1003" type="stmt"/>
-          <line num="50" count="1" type="stmt"/>
-          <line num="51" count="804" type="stmt"/>
-          <line num="57" count="1" type="stmt"/>
-          <line num="58" count="0" type="stmt"/>
-          <line num="65" count="1" type="stmt"/>
-          <line num="66" count="603" type="stmt"/>
-          <line num="73" count="1" type="stmt"/>
-          <line num="74" count="201" type="stmt"/>
-          <line num="83" count="1" type="stmt"/>
-          <line num="84" count="300" type="stmt"/>
-          <line num="85" count="300" type="cond" truecount="1" falsecount="1"/>
-          <line num="86" count="0" type="stmt"/>
-          <line num="88" count="300" type="stmt"/>
-          <line num="97" count="1" type="stmt"/>
-          <line num="98" count="100" type="stmt"/>
-          <line num="99" count="100" type="cond" truecount="1" falsecount="1"/>
-          <line num="100" count="0" type="stmt"/>
-          <line num="102" count="100" type="stmt"/>
-          <line num="108" count="1" type="stmt"/>
-          <line num="109" count="1" type="stmt"/>
-          <line num="112" count="1" type="stmt"/>
-          <line num="113" count="400" type="cond" truecount="1" falsecount="1"/>
-          <line num="114" count="0" type="stmt"/>
+          <line num="38" count="1612" type="stmt"/>
+          <line num="44" count="2" type="stmt"/>
+          <line num="45" count="2" type="stmt"/>
+          <line num="49" count="6" type="stmt"/>
+          <line num="50" count="6" type="stmt"/>
+          <line num="57" count="6" type="stmt"/>
+          <line num="58" count="6" type="stmt"/>
+          <line num="65" count="2" type="stmt"/>
+          <line num="66" count="1208" type="stmt"/>
+          <line num="73" count="2" type="stmt"/>
+          <line num="74" count="404" type="stmt"/>
+          <line num="83" count="2" type="stmt"/>
+          <line num="84" count="601" type="stmt"/>
+          <line num="85" count="601" type="cond" truecount="2" falsecount="0"/>
+          <line num="86" count="1" type="stmt"/>
+          <line num="88" count="600" type="stmt"/>
+          <line num="97" count="2" type="stmt"/>
+          <line num="98" count="201" type="stmt"/>
+          <line num="99" count="201" type="cond" truecount="2" falsecount="0"/>
+          <line num="100" count="1" type="stmt"/>
+          <line num="102" count="200" type="stmt"/>
+          <line num="108" count="2" type="stmt"/>
+          <line num="109" count="2" type="stmt"/>
+          <line num="115" count="2" type="stmt"/>
+          <line num="116" count="1" type="stmt"/>
           <line num="117" count="1" type="stmt"/>
-          <line num="119" count="1" type="stmt"/>
+          <line num="118" count="1" type="stmt"/>
+          <line num="124" count="2" type="stmt"/>
+          <line num="125" count="3" type="stmt"/>
+          <line num="126" count="2" type="stmt"/>
+          <line num="127" count="2" type="stmt"/>
+          <line num="130" count="2" type="stmt"/>
+          <line num="131" count="806" type="cond" truecount="2" falsecount="0"/>
+          <line num="132" count="1" type="stmt"/>
+          <line num="135" count="2" type="stmt"/>
+          <line num="137" count="2" type="stmt"/>
         </file>
         <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Collection/index.ts">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.Queue">
+        <metrics statements="50" coveredstatements="49" conditionals="16" coveredconditionals="15" methods="10" coveredmethods="10"/>
+        <file name="Queue.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Queue/Queue.ts">
+          <metrics statements="48" coveredstatements="47" conditionals="16" coveredconditionals="15" methods="10" coveredmethods="10"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
+          <line num="50" count="7" type="stmt"/>
+          <line num="55" count="7" type="stmt"/>
+          <line num="61" count="10" type="cond" truecount="2" falsecount="0"/>
+          <line num="62" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="63" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="64" count="7" type="stmt"/>
+          <line num="71" count="2" type="stmt"/>
+          <line num="72" count="105" type="cond" truecount="2" falsecount="0"/>
+          <line num="73" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="74" count="0" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
+          <line num="78" count="104" type="stmt"/>
+          <line num="84" count="107" type="stmt"/>
+          <line num="85" count="102" type="cond" truecount="2" falsecount="0"/>
+          <line num="86" count="1" type="stmt"/>
+          <line num="88" count="102" type="stmt"/>
+          <line num="89" count="107" type="stmt"/>
+          <line num="91" count="102" type="stmt"/>
+          <line num="97" count="2" type="stmt"/>
+          <line num="98" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="99" count="2" type="stmt"/>
+          <line num="100" count="2" type="stmt"/>
+          <line num="106" count="2" type="stmt"/>
+          <line num="107" count="323" type="stmt"/>
+          <line num="113" count="2" type="stmt"/>
+          <line num="114" count="109" type="cond" truecount="2" falsecount="0"/>
+          <line num="115" count="2" type="stmt"/>
+          <line num="117" count="107" type="stmt"/>
+          <line num="123" count="2" type="stmt"/>
+          <line num="124" count="2" type="stmt"/>
+          <line num="125" count="2" type="stmt"/>
+          <line num="126" count="2" type="stmt"/>
+          <line num="127" count="2" type="stmt"/>
+          <line num="128" count="2" type="stmt"/>
+          <line num="134" count="2" type="stmt"/>
+          <line num="135" count="1" type="stmt"/>
+          <line num="136" count="1" type="stmt"/>
+          <line num="137" count="1" type="stmt"/>
+          <line num="138" count="2" type="stmt"/>
+          <line num="140" count="1" type="stmt"/>
+          <line num="141" count="1" type="stmt"/>
+          <line num="143" count="2" type="stmt"/>
+          <line num="145" count="2" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Queue/index.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.Stack">
+        <metrics statements="34" coveredstatements="34" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="10"/>
+        <file name="Stack.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Stack/Stack.ts">
+          <metrics statements="32" coveredstatements="32" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="10"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="14" count="4" type="stmt"/>
+          <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="4" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="33" count="2" type="stmt"/>
+          <line num="34" count="106" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="37" count="105" type="stmt"/>
+          <line num="40" count="2" type="stmt"/>
+          <line num="41" count="101" type="stmt"/>
+          <line num="42" count="100" type="stmt"/>
+          <line num="45" count="100" type="stmt"/>
+          <line num="46" count="100" type="stmt"/>
+          <line num="47" count="100" type="stmt"/>
+          <line num="49" count="100" type="stmt"/>
+          <line num="52" count="2" type="stmt"/>
+          <line num="53" count="415" type="stmt"/>
+          <line num="61" count="2" type="stmt"/>
+          <line num="62" count="101" type="cond" truecount="2" falsecount="0"/>
+          <line num="63" count="1" type="stmt"/>
+          <line num="67" count="2" type="stmt"/>
+          <line num="69" count="2" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Stack/index.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
         </file>
       </package>
       <package name="src.exceptions">
-        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <file name="EmptyCollection.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/exceptions/EmptyCollection.ts">
-          <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="8" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
         </file>
         <file name="OutOfBounds.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/exceptions/OutOfBounds.ts">
-          <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
         </file>
         <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/exceptions/index.ts">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="2" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.queue">
-        <metrics statements="50" coveredstatements="37" conditionals="16" coveredconditionals="8" methods="10" coveredmethods="8"/>
-        <file name="Queue.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/queue/Queue.ts">
-          <metrics statements="48" coveredstatements="35" conditionals="16" coveredconditionals="8" methods="10" coveredmethods="8"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="2" count="1" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
-          <line num="50" count="2" type="stmt"/>
-          <line num="55" count="2" type="stmt"/>
-          <line num="61" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="62" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="63" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="64" count="2" type="stmt"/>
-          <line num="71" count="1" type="stmt"/>
-          <line num="72" count="100" type="cond" truecount="1" falsecount="1"/>
-          <line num="73" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="74" count="0" type="stmt"/>
-          <line num="76" count="0" type="stmt"/>
-          <line num="78" count="100" type="stmt"/>
-          <line num="84" count="100" type="stmt"/>
-          <line num="85" count="100" type="cond" truecount="1" falsecount="1"/>
-          <line num="86" count="0" type="stmt"/>
-          <line num="88" count="100" type="stmt"/>
-          <line num="89" count="100" type="stmt"/>
-          <line num="91" count="100" type="stmt"/>
-          <line num="97" count="1" type="stmt"/>
-          <line num="98" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="99" count="0" type="stmt"/>
-          <line num="100" count="0" type="stmt"/>
-          <line num="106" count="1" type="stmt"/>
-          <line num="107" count="313" type="stmt"/>
-          <line num="113" count="1" type="stmt"/>
-          <line num="114" count="106" type="cond" truecount="2" falsecount="0"/>
-          <line num="115" count="1" type="stmt"/>
-          <line num="117" count="105" type="stmt"/>
-          <line num="123" count="1" type="stmt"/>
-          <line num="124" count="1" type="stmt"/>
-          <line num="125" count="1" type="stmt"/>
-          <line num="126" count="1" type="stmt"/>
-          <line num="127" count="1" type="stmt"/>
-          <line num="128" count="1" type="stmt"/>
-          <line num="134" count="1" type="stmt"/>
-          <line num="135" count="0" type="stmt"/>
-          <line num="136" count="0" type="stmt"/>
-          <line num="137" count="0" type="stmt"/>
-          <line num="138" count="0" type="stmt"/>
-          <line num="140" count="0" type="stmt"/>
-          <line num="141" count="0" type="stmt"/>
-          <line num="143" count="1" type="stmt"/>
-          <line num="145" count="1" type="stmt"/>
-        </file>
-        <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/queue/index.ts">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="3" count="1" type="stmt"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
         </file>
       </package>
     </metrics>

@@ -9,6 +9,8 @@ interface ICollection<Type> extends Iterable<Type> {
 
     entries(): Type[];
 
+    isEmpty(): boolean;
+
     clone(): ICollection<Type>;
 }
 

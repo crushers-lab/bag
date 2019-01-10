@@ -23,19 +23,6 @@ import IIterator from "./IIterator";
  * ```
  */
 class Iterator<Type> implements IIterator<Type> {
-    private readonly _data: Type[];
-    private readonly _length: number;
-    private _index: number = 0;
-    private _current: Type | undefined = undefined;
-
-    /**
-     * @constructor Takes collection to make a iterable
-     * @param collection
-     */
-    constructor(collection: ICollection<Type>) {
-        this._data = collection.entries();
-        this._length = collection.size();
-    }
 
     /**
      * @property specifies the length of iterable
@@ -56,6 +43,19 @@ class Iterator<Type> implements IIterator<Type> {
      */
     public get current() {
         return this._current;
+    }
+    private readonly _data: Type[];
+    private readonly _length: number;
+    private _index: number = 0;
+    private _current: Type | undefined = undefined;
+
+    /**
+     * @constructor Takes collection to make a iterable
+     * @param collection
+     */
+    constructor(collection: ICollection<Type>) {
+        this._data = collection.entries();
+        this._length = collection.size();
     }
 
     /**
@@ -107,6 +107,24 @@ class Iterator<Type> implements IIterator<Type> {
      */
     public reset(): void {
         this._index = 0;
+    }
+
+    /**
+     * @function move to end of collection
+     */
+    public end(): void {
+        this._assertNotEmpty();
+        this._index = this.length;
+        this._current = this._data[this._index - 1];
+    }
+
+    /**
+     * @function move to beginning of collection
+     */
+    public start(): void {
+        this._assertNotEmpty();
+        this._index = 0;
+        this._current = this._data[0];
     }
 
     private _assertNotEmpty() {

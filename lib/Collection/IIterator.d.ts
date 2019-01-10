@@ -4,5 +4,7 @@ interface IIterator<Type> {
     hasPrev(): boolean;
     prev(): Type;
     reset(): void;
+    start(): void;
+    end(): void;
 }
 export default IIterator;
