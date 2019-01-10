@@ -1,5 +1,6 @@
+import ICloneable from "./ICloneable";
 import Iterator from "./Iterator";
-interface ICollection<Type> extends Iterable<Type> {
+interface ICollection<Type> extends Iterable<Type>, ICloneable {
     size(): number;
     clear(): void;
     getIterator(): Iterator<Type>;

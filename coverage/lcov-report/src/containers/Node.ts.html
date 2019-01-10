@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/containers/Node.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/containers</a> Node.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.68% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.97% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>27/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">97x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">194x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">194x</span>
+<span class="cline-any cline-yes">155x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import ICloneable, {isCloneable} from "../Collection/ICloneable";
+&nbsp;
+export type NodeValue&lt;T&gt; = Node&lt;T&gt; | null;
+&nbsp;
+class Node&lt;Type&gt; implements ICloneable {
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public set value(</span>value: Type) {
+<span class="cstat-no" title="statement not covered" >        this._value = value;</span>
+    }
+&nbsp;
+    public get value(): Type {
+        return this._value;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public get links(): string[] {</span>
+        const it = <span class="cstat-no" title="statement not covered" >this._links.keys();</span>
+        const keys = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >        for (const key in it) {</span>
+<span class="cstat-no" title="statement not covered" >            if (key) {</span>
+<span class="cstat-no" title="statement not covered" >                keys.push(key);</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        return keys;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public set left(</span>node: NodeValue&lt;Type&gt;) {
+<span class="cstat-no" title="statement not covered" >        this.setLink(Node.LEFT, node);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public get left() {</span>
+<span class="cstat-no" title="statement not covered" >        return this._link(Node.LEFT);</span>
+    }
+&nbsp;
+    public set right(node: NodeValue&lt;Type&gt;) {
+        this.setLink(Node.RIGHT, node);
+    }
+&nbsp;
+    public get right() {
+        return this._link(Node.RIGHT);
+    }
+&nbsp;
+    public static readonly LEFT = "left";
+    public static readonly RIGHT = "right";
+    private readonly _links: Map&lt;string, NodeValue&lt;Type&gt;&gt;;
+    private _value: Type;
+&nbsp;
+    constructor(value: Type) {
+        this._value = value;
+        this._links = new Map&lt;string, NodeValue&lt;Type&gt;&gt;();
+    }
+&nbsp;
+    public setLink(key: string, value: NodeValue&lt;Type&gt;) {
+        this._links.set(key, value);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public unlink(</span>key: string) {
+<span class="cstat-no" title="statement not covered" >        this._links.delete(key);</span>
+    }
+&nbsp;
+    public clone(): Node&lt;Type&gt; {
+        const value = this.value ? (isCloneable(this.value) ? <span class="branch-0 cbranch-no" title="branch not covered" >this.value.clone() </span>: this.value) : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
+        const node = new Node(value as Type);
+        this._links.forEach((n, key) =&gt; node._links.set(key, n ? n.clone() : <span class="branch-1 cbranch-no" title="branch not covered" >null)</span>);
+        return node;
+    }
+&nbsp;
+    protected _link(key: string): NodeValue&lt;Type&gt; {
+        if (this._links.has(key)) {
+            return this._links.get(key) as Node&lt;Type&gt;;
+        }
+        return null;
+    }
+}
+&nbsp;
+export default Node;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 11 2019 04:18:59 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

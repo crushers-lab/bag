@@ -31,10 +31,9 @@ abstract class AbstractCollection<Type> implements ICollection<Type> {
      *  ```
      */
     public* [Symbol.iterator]() {
-        const data: Type[] = this.entries();
-        const size: number = this.size();
-        for (let i = 0; i < size; i++) {
-            yield data[i];
+        const it = this.getIterator();
+        while (it.hasNext()) {
+            yield it.next();
         }
     }
 
