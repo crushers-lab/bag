@@ -1,4 +1,5 @@
 import {AbstractCollection} from "../Collection";
+import {clone} from "../Collection/ICloneable";
 import {EmptyCollectionException} from "../exceptions";
 import IQueue from "./IQueue";
 
@@ -125,7 +126,7 @@ class Queue<Type> extends AbstractCollection<Type> implements IQueue<Type> {
         const queue = new Queue<Type>(this._size);
         queue._left = this._left;
         queue._right = this._right;
-        queue._queue = [...this._queue];
+        queue._queue = this._queue.map((value) => clone(value));
         return queue;
     }
 

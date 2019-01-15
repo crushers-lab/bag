@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/Matrix/MatrixUtils.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/Matrix</a> MatrixUtils.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.35% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>82/86</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.18% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.37% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>67/71</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Matrix from "./Matrix";
+import {MatrixType, VectorType} from "./types";
+&nbsp;
+class MatrixUtils {
+    public static transpose(matrix: MatrixType&lt;any&gt;): MatrixType&lt;any&gt; {
+        const tp: MatrixType&lt;any&gt; = [];
+        const [m, n] = Matrix.getOrder(matrix);
+        for (let i = 0; i &lt; n; i++) {
+            tp[i] = [];
+            for (let j = 0; j &lt; m; j++) {
+                tp[i][j] = matrix[j][i];
+            }
+        }
+        return tp;
+    }
+&nbsp;
+    public static inverse(matrix: MatrixType&lt;number&gt;): MatrixType&lt;number&gt; {
+        const [m, n] = Matrix.getOrder(matrix);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (m !== n) {
+<span class="cstat-no" title="statement not covered" >            throw new Error("Not a square matrix");</span>
+        }
+        const id = this.identity(n);
+        const adj = this.concat(matrix, id);
+        const n2 = 2 * n;
+        for (let i = 0; i &lt; n; i++) {
+            for (let j = 0; j &lt; n; j++) {
+                if (i !== j) {
+                    const ratio = adj[j][i] / adj[i][i];
+                    for (let k = 0; k &lt; n2; k++) {
+                        adj[j][k] -= ratio * adj[i][k];
+                    }
+                }
+            }
+        }
+        let count = 0;
+        for (let i = 0; i &lt; n; i++) {
+            if (adj[n - 1][i] === 0) {
+                count++;
+            }
+        }
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (count === n) {
+<span class="cstat-no" title="statement not covered" >            throw new Error("Cannot find inverse of matrix");</span>
+        }
+        for (let i = 0; i &lt; n; i++) {
+            const a = adj[i][i];
+            for (let j = 0; j &lt; n2; j++) {
+                adj[i][j] /= a;
+            }
+        }
+        return this.extract(adj, 0, n, n, n);
+    }
+&nbsp;
+    public static extract(matrix: MatrixType&lt;any&gt;, mStart: number, <span class="missing-if-branch" title="if path not taken" >I</span>nStart: number = mStart,
+                          <span class="missing-if-branch" title="if path not taken" >I</span>mStop: number = 0, <span class="missing-if-branch" title="if path not taken" >I</span>nStop: number = 0) {
+        return matrix
+            .slice(mStart, mStart + mStop)
+            .map((vector: VectorType&lt;any&gt;) =&gt; vector.slice(nStart, nStart + nStop));
+    }
+&nbsp;
+    public static concat(a: MatrixType&lt;any&gt;, b: MatrixType&lt;any&gt;) {
+        const [m, n] = Matrix.getOrder(a);
+        const [p, q] = Matrix.getOrder(b);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (m !== p || n !== q) {
+<span class="cstat-no" title="statement not covered" >            throw new Error("Order should be same for concat");</span>
+        }
+        return a.map((vector: VectorType&lt;any&gt;, index: number) =&gt; [...vector, ...b[index]]);
+    }
+&nbsp;
+    public static multiply(a: MatrixType&lt;number&gt;, b: MatrixType&lt;number&gt;): MatrixType&lt;number&gt; {
+        const [m, n] = Matrix.getOrder(a);
+        const [p, q] = Matrix.getOrder(b);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (n !== p) {
+<span class="cstat-no" title="statement not covered" >            throw new Error("n is not equal to p. Not able to multiply");</span>
+        }
+        const c = this.fill(m, q, 0);
+        for (let i = 0; i &lt; m; i++) {
+            for (let j = 0; j &lt; q; j++) {
+                for (let k = 0; k &lt; n; ++k) {
+                    c[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+        return c;
+    }
+&nbsp;
+    public static fill(m: number, n: number, num: any): MatrixType&lt;any&gt; {
+        const matrix: MatrixType&lt;any&gt; = [];
+        for (let i = 0; i &lt; m; i++) {
+            matrix[i] = [];
+            for (let j = 0; j &lt; n; j++) {
+                matrix[i][j] = num;
+            }
+        }
+        return matrix;
+    }
+&nbsp;
+    public static identity(n: number) {
+        const matrix: MatrixType&lt;number&gt; = [];
+        for (let i = 0; i &lt; n; i++) {
+            matrix[i] = [];
+            for (let j = 0; j &lt; n; j++) {
+                matrix[i][j] = (i === j) ? 1 : 0;
+            }
+        }
+        return matrix;
+    }
+}
+&nbsp;
+export default MatrixUtils;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 16 2019 01:33:57 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

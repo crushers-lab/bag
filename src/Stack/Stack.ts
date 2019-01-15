@@ -1,4 +1,5 @@
 import {AbstractCollection} from "../Collection";
+import {clone} from "../Collection/ICloneable";
 import {EmptyCollectionException} from "../exceptions";
 import IStack from "./IStack";
 
@@ -25,7 +26,7 @@ class Stack<Type> extends AbstractCollection<Type> implements IStack<Type> {
 
     public clone(): Stack<Type> {
         const stack = new Stack<Type>();
-        stack._stack = [...this._stack];
+        stack._stack = this._stack.map((value) => clone(value));
         stack._top = this._top;
         return stack;
     }

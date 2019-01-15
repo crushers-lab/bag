@@ -1,4 +1,4 @@
-import ICloneable, {isCloneable} from "../Collection/ICloneable";
+import ICloneable, {clone} from "../Collection/ICloneable";
 
 export type NodeValue<T> = Node<T> | null;
 
@@ -58,7 +58,7 @@ class Node<Type> implements ICloneable {
     }
 
     public clone(): Node<Type> {
-        const value = this.value ? (isCloneable(this.value) ? this.value.clone() : this.value) : null;
+        const value = clone(this.value);
         const node = new Node(value as Type);
         this._links.forEach((n, key) => node._links.set(key, n ? n.clone() : null));
         return node;
