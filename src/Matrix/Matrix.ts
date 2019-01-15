@@ -1,8 +1,7 @@
 import AbstractCollection from "../Collection/AbstractCollection";
-import {clone} from "../Collection/ICloneable";
 import {OutOfBoundsException} from "../exceptions";
 import MatrixUtils from "./MatrixUtils";
-import {MatrixOrder, MatrixType, VectorType} from "./types";
+import {MatrixOrder, MatrixType} from "./types";
 
 class Matrix<Type> extends AbstractCollection<Type> {
 
@@ -38,14 +37,6 @@ class Matrix<Type> extends AbstractCollection<Type> {
         return new Matrix<any>(MatrixUtils.concat(a.matrix, b.matrix));
     }
 
-    private static _cloneMatrix(matrix: MatrixType<any>): MatrixType<any> {
-        return matrix.map((vector: VectorType<number>) => this._cloneVector(vector));
-    }
-
-    private static _cloneVector(vector: VectorType<any>): VectorType<any> {
-        return vector.map((value: any) => clone(value));
-    }
-
     private _matrix: MatrixType<Type>;
     private _order: MatrixOrder;
 
@@ -70,12 +61,12 @@ class Matrix<Type> extends AbstractCollection<Type> {
     }
 
     public clone(): Matrix<Type> {
-        return new Matrix<Type>(Matrix._cloneMatrix(this.matrix));
+        return new Matrix<Type>(MatrixUtils.cloneMatrix(this.matrix));
     }
 
     public entries(): Type[] {
-        return Matrix
-            ._cloneMatrix(this.matrix)
+        return MatrixUtils
+            .cloneMatrix(this.matrix)
             .reduce((acc: Type[], vector) => [...acc, ...vector], []);
     }
 

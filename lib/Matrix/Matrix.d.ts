@@ -7,8 +7,6 @@ declare class Matrix<Type> extends AbstractCollection<Type> {
     static getOrder(matrix: MatrixType<any>): MatrixOrder;
     static fill(m: number, n: number, val: any): Matrix<any>;
     static concat(a: Matrix<any>, b: Matrix<any>): Matrix<any>;
-    private static _cloneMatrix;
-    private static _cloneVector;
     private _matrix;
     private _order;
     constructor(matrix?: MatrixType<Type>);

@@ -7,7 +7,7 @@ declare class MatrixUtils {
     static multiply(a: MatrixType<number>, b: MatrixType<number>): MatrixType<number>;
     static fill(m: number, n: number, num: any): MatrixType<any>;
     static identity(n: number): number[][];
-    static cloneMatrix(matrix: MatrixType<number>): MatrixType<number>;
-    static cloneVector(vector: VectorType<number>): VectorType<number>;
+    static cloneMatrix(matrix: MatrixType<any>): MatrixType<any>;
+    static cloneVector(vector: VectorType<any>): VectorType<any>;
 }
 export default MatrixUtils;

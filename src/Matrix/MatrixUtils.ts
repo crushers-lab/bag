@@ -1,3 +1,4 @@
+import {clone} from "../Collection/ICloneable";
 import Matrix from "./Matrix";
 import {MatrixType, VectorType} from "./types";
 
@@ -105,12 +106,12 @@ class MatrixUtils {
         return matrix;
     }
 
-    public static cloneMatrix(matrix: MatrixType<number>): MatrixType<number> {
-        return matrix.map((vector: VectorType<number>) => this.cloneVector(vector));
+    public static cloneMatrix(matrix: MatrixType<any>): MatrixType<any> {
+        return matrix.map((vector: VectorType<any>) => this.cloneVector(vector));
     }
 
-    public static cloneVector(vector: VectorType<number>): VectorType<number> {
-        return [...vector];
+    public static cloneVector(vector: VectorType<any>): VectorType<any> {
+        return vector.map((value) => clone(value));
     }
 }
 

@@ -16,7 +16,7 @@ class MatrixOp extends Matrix<number> {
     }
 
     public inverseInPlace(): MatrixOp {
-        this.matrix = this.inverse().matrix as any;
+        this.matrix = this.inverse().matrix;
         return this;
     }
 
@@ -30,31 +30,34 @@ class MatrixOp extends Matrix<number> {
     }
 
     public transpose(): MatrixOp {
-        return super.transpose() as MatrixOp;
+        return new MatrixOp(super.transpose().matrix);
     }
 
     public transposeInPlace(): MatrixOp {
-        return super.transposeInPlace() as MatrixOp;
+        super.transposeInPlace();
+        return this;
     }
 
     public extract(mStart: number, nStart: number, mStop: number, nStop: number): MatrixOp {
-        return super.extract(mStart, nStart, mStop, nStop) as MatrixOp;
+        return new MatrixOp(super.extract(mStart, nStart, mStop, nStop).matrix);
     }
 
     public extractInPlace(mStart: number, nStart: number, mStop: number, nStop: number): MatrixOp {
-        return super.extractInPlace(mStart, nStart, mStop, nStop) as MatrixOp;
+        super.extractInPlace(mStart, nStart, mStop, nStop);
+        return this;
     }
 
     public concat(matrix: MatrixOp): MatrixOp {
-        return super.concat(matrix) as MatrixOp;
+        return new MatrixOp(super.concat(matrix).matrix) as MatrixOp;
     }
 
     public concatInPlace(matrix: MatrixOp): MatrixOp {
-        return super.concatInPlace(matrix) as MatrixOp;
+        super.concatInPlace(matrix);
+        return this;
     }
 
     public clone(): MatrixOp {
-        return super.clone() as MatrixOp;
+        return new MatrixOp(super.clone().matrix);
     }
 }
 
