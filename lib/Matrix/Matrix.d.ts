@@ -21,7 +21,7 @@ declare class Matrix<Type> extends AbstractCollection<Type> {
     transpose(): Matrix<Type>;
     transposeInPlace(): Matrix<Type>;
     extract(mStart: number, nStart: number, mStop: number, nStop: number): Matrix<Type>;
-    extractInPlace(mStart: number, nStart: number, mStop: number, nStop: number): this;
+    extractInPlace(mStart: number, nStart: number, mStop: number, nStop: number): Matrix<Type>;
     concat(matrix: Matrix<Type>): Matrix<Type>;
     concatInPlace(matrix: Matrix<Type>): Matrix<Type>;
     protected _assertBounds(m: number, n: number): void;

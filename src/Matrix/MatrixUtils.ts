@@ -104,6 +104,14 @@ class MatrixUtils {
         }
         return matrix;
     }
+
+    public static cloneMatrix(matrix: MatrixType<number>): MatrixType<number> {
+        return matrix.map((vector: VectorType<number>) => this.cloneVector(vector));
+    }
+
+    public static cloneVector(vector: VectorType<number>): VectorType<number> {
+        return [...vector];
+    }
 }
 
 export default MatrixUtils;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1547582637334" clover="3.2.0">
-  <project timestamp="1547582637334" name="All files">
-    <metrics statements="534" coveredstatements="487" conditionals="111" coveredconditionals="90" methods="129" coveredmethods="97" elements="774" coveredelements="674" complexity="0" loc="534" ncloc="534" packages="9" files="24" classes="24">
+<coverage generated="1547583625342" clover="3.2.0">
+  <project timestamp="1547583625342" name="All files">
+    <metrics statements="550" coveredstatements="495" conditionals="111" coveredconditionals="90" methods="138" coveredmethods="97" elements="799" coveredelements="682" complexity="0" loc="550" ncloc="550" packages="9" files="24" classes="24">
       <package name="src">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/index.ts">
@@ -266,7 +266,7 @@
         </file>
       </package>
       <package name="src.Matrix">
-        <metrics statements="164" coveredstatements="127" conditionals="30" coveredconditionals="18" methods="45" coveredmethods="19"/>
+        <metrics statements="180" coveredstatements="135" conditionals="30" coveredconditionals="18" methods="54" coveredmethods="19"/>
         <file name="Matrix.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Matrix/Matrix.ts">
           <metrics statements="65" coveredstatements="38" conditionals="8" coveredconditionals="3" methods="27" coveredmethods="5"/>
           <line num="1" count="4" type="stmt"/>
@@ -336,31 +336,43 @@
           <line num="120" count="4" type="stmt"/>
         </file>
         <file name="MatrixOp.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Matrix/MatrixOp.ts">
-          <metrics statements="21" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
+          <metrics statements="33" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="4"/>
           <line num="1" count="4" type="stmt"/>
           <line num="2" count="4" type="stmt"/>
           <line num="4" count="4" type="stmt"/>
           <line num="6" count="4" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
           <line num="10" count="4" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
           <line num="14" count="4" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="19" count="4" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="18" count="4" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
           <line num="23" count="4" type="stmt"/>
-          <line num="24" count="0" type="stmt"/>
-          <line num="25" count="0" type="stmt"/>
-          <line num="28" count="4" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="27" count="4" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
           <line num="32" count="4" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
-          <line num="35" count="4" type="stmt"/>
-          <line num="37" count="4" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="36" count="4" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="40" count="4" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="44" count="4" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="48" count="4" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="52" count="4" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="56" count="4" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="59" count="4" type="stmt"/>
+          <line num="61" count="4" type="stmt"/>
         </file>
         <file name="MatrixUtils.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Matrix/MatrixUtils.ts">
-          <metrics statements="71" coveredstatements="67" conditionals="22" coveredconditionals="15" methods="10" coveredmethods="10"/>
+          <metrics statements="75" coveredstatements="69" conditionals="22" coveredconditionals="15" methods="13" coveredmethods="10"/>
           <line num="1" count="4" type="stmt"/>
           <line num="4" count="4" type="stmt"/>
           <line num="5" count="4" type="stmt"/>
@@ -430,8 +442,12 @@
           <line num="101" count="3" type="stmt"/>
           <line num="102" count="9" type="cond" truecount="2" falsecount="0"/>
           <line num="105" count="1" type="stmt"/>
-          <line num="107" count="4" type="stmt"/>
-          <line num="109" count="4" type="stmt"/>
+          <line num="108" count="4" type="stmt"/>
+          <line num="109" count="0" type="stmt"/>
+          <line num="112" count="4" type="stmt"/>
+          <line num="113" count="0" type="stmt"/>
+          <line num="115" count="4" type="stmt"/>
+          <line num="117" count="4" type="stmt"/>
         </file>
         <file name="index.ts" path="/home/deepak/Desktop/crushers/cop/bag/src/Matrix/index.ts">
           <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

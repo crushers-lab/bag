@@ -1,4 +1,4 @@
-import { MatrixType } from "./types";
+import { MatrixType, VectorType } from "./types";
 declare class MatrixUtils {
     static transpose(matrix: MatrixType<any>): MatrixType<any>;
     static inverse(matrix: MatrixType<number>): MatrixType<number>;
@@ -7,5 +7,7 @@ declare class MatrixUtils {
     static multiply(a: MatrixType<number>, b: MatrixType<number>): MatrixType<number>;
     static fill(m: number, n: number, num: any): MatrixType<any>;
     static identity(n: number): number[][];
+    static cloneMatrix(matrix: MatrixType<number>): MatrixType<number>;
+    static cloneVector(vector: VectorType<number>): VectorType<number>;
 }
 export default MatrixUtils;

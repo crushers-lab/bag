@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">72.73% </span>
+        <span class="strong">64.71% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>16/22</span>
+        <span class='fraction'>22/34</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">28.57% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/8</span>
+        <span class='fraction'>4/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">63.64% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>15/21</span>
+        <span class='fraction'>21/33</span>
       </div>
     </div>
   </div>
@@ -80,10 +80,38 @@
 35
 36
 37
-38</td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -109,6 +137,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
@@ -124,6 +172,10 @@ class MatrixOp extends Matrix&lt;number&gt; {
 &nbsp;
 <span class="fstat-no" title="function not covered" >    public static identity(</span>n: number) {
 <span class="cstat-no" title="statement not covered" >        return new MatrixOp(MatrixUtils.identity(n));</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public static fill(</span>m: number, n: number, val: number): MatrixOp {
+<span class="cstat-no" title="statement not covered" >        return new MatrixOp(MatrixUtils.fill(m, n, val));</span>
     }
 &nbsp;
     public inverse(): MatrixOp {
@@ -151,6 +203,26 @@ class MatrixOp extends Matrix&lt;number&gt; {
 <span class="fstat-no" title="function not covered" >    public transposeInPlace(): MatrixOp {</span>
 <span class="cstat-no" title="statement not covered" >        return super.transposeInPlace() as MatrixOp;</span>
     }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public extract(</span>mStart: number, nStart: number, mStop: number, nStop: number): MatrixOp {
+<span class="cstat-no" title="statement not covered" >        return super.extract(mStart, nStart, mStop, nStop) as MatrixOp;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public extractInPlace(</span>mStart: number, nStart: number, mStop: number, nStop: number): MatrixOp {
+<span class="cstat-no" title="statement not covered" >        return super.extractInPlace(mStart, nStart, mStop, nStop) as MatrixOp;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public concat(</span>matrix: MatrixOp): MatrixOp {
+<span class="cstat-no" title="statement not covered" >        return super.concat(matrix) as MatrixOp;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public concatInPlace(</span>matrix: MatrixOp): MatrixOp {
+<span class="cstat-no" title="statement not covered" >        return super.concatInPlace(matrix) as MatrixOp;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public clone(): MatrixOp {</span>
+<span class="cstat-no" title="statement not covered" >        return super.clone() as MatrixOp;</span>
+    }
 }
 &nbsp;
 export default MatrixOp;
@@ -160,7 +232,7 @@ export default MatrixOp;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 16 2019 01:33:57 GMT+0530 (India Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 16 2019 01:50:25 GMT+0530 (India Standard Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

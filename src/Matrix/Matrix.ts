@@ -92,11 +92,11 @@ class Matrix<Type> extends AbstractCollection<Type> {
         return this;
     }
 
-    public extract(mStart: number, nStart: number, mStop: number, nStop: number) {
+    public extract(mStart: number, nStart: number, mStop: number, nStop: number): Matrix<Type> {
         return new Matrix<Type>(MatrixUtils.extract(this.matrix, mStart, nStart, mStop, nStop));
     }
 
-    public extractInPlace(mStart: number, nStart: number, mStop: number, nStop: number) {
+    public extractInPlace(mStart: number, nStart: number, mStop: number, nStop: number): Matrix<Type> {
         this.matrix = this.extract(mStart, nStart, mStop, nStop).matrix;
         return this;
     }
