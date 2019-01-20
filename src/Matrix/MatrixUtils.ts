@@ -1,4 +1,5 @@
 import _ from "lodash";
+import MlMatrix from "ml-matrix";
 import {clone} from "../Collection/ICloneable";
 import {replaceNaN} from "./decorators";
 import Matrix from "./Matrix";
@@ -189,6 +190,12 @@ class MatrixUtils {
     public static eachVector(matrix: MatrixType<number>,
                              operation: (vector: VectorType<number>, index: number) => VectorType<number>) {
         return matrix.map((vector: VectorType<number>, index: number) => operation(vector, index));
+    }
+
+    public static pInverse(matrix: MatrixType<number>) {
+        const A = this.cloneMatrix(matrix);
+        const mat = new MlMatrix(A);
+        return mat.pseudoInverse(Number.EPSILON).to2DArray();
     }
 
     public static fill(m: number, n: number, num: any): MatrixType<any> {

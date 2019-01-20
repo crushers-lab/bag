@@ -26,6 +26,15 @@ class MatrixOp extends Matrix<number> {
         return this;
     }
 
+    public pInverse(): MatrixOp {
+        return new MatrixOp(MatrixUtils.pInverse(this.matrix));
+    }
+
+    public pInverseInPlace(): MatrixOp {
+        this.matrix = this.pInverse().matrix;
+        return this;
+    }
+
     public multiply(matrix: MatrixOp | number): MatrixOp {
         return new MatrixOp(MatrixUtils.multiply(this.matrix, MatrixOp.getValue(matrix)));
     }

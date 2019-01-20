@@ -59,4 +59,13 @@ describe("Tests on MatrixUtils", () => {
         ];
         expect(MatrixUtils.addRow(matrix, [10, 11, 12], 2)).toEqual(expected);
     });
+
+    test("pinv of matrix", () => {
+        const mat = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        console.log(MatrixUtils.pInverse(mat));
+    });
 });

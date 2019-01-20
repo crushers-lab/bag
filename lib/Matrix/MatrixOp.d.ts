@@ -6,6 +6,8 @@ declare class MatrixOp extends Matrix<number> {
     private static getValue;
     inverse(): MatrixOp;
     inverseInPlace(): MatrixOp;
+    pInverse(): MatrixOp;
+    pInverseInPlace(): MatrixOp;
     multiply(matrix: MatrixOp | number): MatrixOp;
     multiplyInPlace(matrix: MatrixOp | number): MatrixOp;
     add(matrix: MatrixOp | number): MatrixOp;
