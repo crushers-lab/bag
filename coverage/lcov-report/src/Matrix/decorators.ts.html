@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/exceptions/EmptyCollection.ts</title>
+    <title>Code coverage report for src/Matrix/decorators.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">src/exceptions</a> EmptyCollection.ts
+      <a href="../../index.html">All files</a> / <a href="index.html">src/Matrix</a> decorators.ts
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>8/8</span>
       </div>
     </div>
   </div>
@@ -50,20 +50,47 @@
 5
 6
 7
-8</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-yes">40x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class EmptyCollectionException extends Error {
-    constructor() {
-        super("AbstractCollection is empty")<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
-    }
-}
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import MatrixUtils from "./MatrixUtils";
+import {MatrixType} from "./types";
 &nbsp;
-export default EmptyCollectionException;
+export function replaceNaN() {
+    return (_target: any, _propertyKey: string, descriptor: TypedPropertyDescriptor&lt;any&gt;) =&gt; {
+        const originalMethod = descriptor.value;
+&nbsp;
+        // tslint:disable-next-line
+        descriptor.value = function () {
+            const matrix: MatrixType&lt;number&gt; = originalMethod.apply(MatrixUtils, arguments);
+            return MatrixUtils.replaceNaN(matrix, 0);
+        };
+&nbsp;
+        return descriptor;
+    };
+}
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

@@ -18,6 +18,7 @@ declare class MatrixUtils {
     static eachVector(matrix: MatrixType<number>, operation: (vector: VectorType<number>, index: number) => VectorType<number>): number[][];
     static fill(m: number, n: number, num: any): MatrixType<any>;
     static identity(n: number): number[][];
+    static replaceNaN(matrix: MatrixType<number>, value?: number): number[][];
     static cloneMatrix(matrix: MatrixType<any>): MatrixType<any>;
     static cloneVector(vector: VectorType<any>): VectorType<any>;
 }

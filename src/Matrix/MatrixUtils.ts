@@ -1,9 +1,12 @@
 import _ from "lodash";
 import {clone} from "../Collection/ICloneable";
+import {replaceNaN} from "./decorators";
 import Matrix from "./Matrix";
 import {MatrixType, ScalarOperation, VectorOperation, VectorType} from "./types";
 
 class MatrixUtils {
+
+    @replaceNaN()
     public static transpose(matrix: MatrixType<any>): MatrixType<any> {
         const tp: MatrixType<any> = [];
         const [m, n] = Matrix.getOrder(matrix);
@@ -16,6 +19,7 @@ class MatrixUtils {
         return tp;
     }
 
+    @replaceNaN()
     public static inverse(matrix: MatrixType<number>): MatrixType<number> {
         const [m, n] = Matrix.getOrder(matrix);
         if (m !== n) {
@@ -68,6 +72,7 @@ class MatrixUtils {
         return a.map((vector: VectorType<any>, index: number) => [...vector, ...b[index]]);
     }
 
+    @replaceNaN()
     public static multiply(a: MatrixType<number>, b: number | MatrixType<number>): MatrixType<number> {
         if (_.isNumber(b)) {
             return this.scalarOperation(a, (value) => value * b);
@@ -88,10 +93,12 @@ class MatrixUtils {
         return c;
     }
 
+    @replaceNaN()
     public static divide(matrix: MatrixType<number>, scalar: number): MatrixType<number> {
         return this.scalarOperation(matrix, (value: number) => value / scalar);
     }
 
+    @replaceNaN()
     public static add(a: MatrixType<number>, b: number | MatrixType<number>): MatrixType<number> {
         if (_.isNumber(b)) {
             return this.scalarOperation(a, (value: number) => value + b);
@@ -100,6 +107,7 @@ class MatrixUtils {
         return this.vectorOperation(a, (value, i, j) => value + b[i][j]);
     }
 
+    @replaceNaN()
     public static sub(a: MatrixType<number>, b: number | MatrixType<number>): MatrixType<number> {
         if (_.isNumber(b)) {
             return this.scalarOperation(a, (value: number) => value - b);
@@ -140,6 +148,7 @@ class MatrixUtils {
         return array;
     }
 
+    @replaceNaN()
     public static addColumn(matrix: MatrixType<number>, value: number | VectorType<number> = 1,
                             index: number = 0): MatrixType<number> {
         let vector: number[] = [];
@@ -155,6 +164,7 @@ class MatrixUtils {
         return this.eachVector(matrix, (v, i) => this.addValueAt(v, vector[i], index));
     }
 
+    @replaceNaN()
     public static addRow(matrix: MatrixType<number>, value: number | VectorType<number> = 1,
                          index: number = 0): MatrixType<number> {
         let vector: number[] = [];
@@ -201,6 +211,10 @@ class MatrixUtils {
             }
         }
         return matrix;
+    }
+
+    public static replaceNaN(matrix: MatrixType<number>, value: number = 0) {
+        return this.scalarOperation(matrix, (val) => _.isNaN(val) ? value : val);
     }
 
     public static cloneMatrix(matrix: MatrixType<any>): MatrixType<any> {
