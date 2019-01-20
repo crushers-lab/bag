@@ -84,15 +84,26 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#add" class="tsd-kind-icon">add</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#addcolumn" class="tsd-kind-icon">add<wbr>Column</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#addrow" class="tsd-kind-icon">add<wbr>Row</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#addvalueat" class="tsd-kind-icon">add<wbr>Value<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#assertorder" class="tsd-kind-icon">assert<wbr>Order</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#clonematrix" class="tsd-kind-icon">clone<wbr>Matrix</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#clonevector" class="tsd-kind-icon">clone<wbr>Vector</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#concat" class="tsd-kind-icon">concat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#divide" class="tsd-kind-icon">divide</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#eachvector" class="tsd-kind-icon">each<wbr>Vector</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#extract" class="tsd-kind-icon">extract</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#fill" class="tsd-kind-icon">fill</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#fillvector" class="tsd-kind-icon">fill<wbr>Vector</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#identity" class="tsd-kind-icon">identity</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#inverse" class="tsd-kind-icon">inverse</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#multiply" class="tsd-kind-icon">multiply</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#scalaroperation" class="tsd-kind-icon">scalar<wbr>Operation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#sub" class="tsd-kind-icon">sub</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#transpose" class="tsd-kind-icon">transpose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_matrix_matrixutils_.matrixutils.html#vectoroperation" class="tsd-kind-icon">vector<wbr>Operation</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,6 +111,145 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="add" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L95">Matrix/MatrixUtils.ts:95</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>b: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="addcolumn" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add<wbr>Column</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Column<span class="tsd-signature-symbol">(</span>matrix<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, index<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L143">Matrix/MatrixUtils.ts:143</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matrix: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> value: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> index: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="addrow" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add<wbr>Row</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Row<span class="tsd-signature-symbol">(</span>matrix<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, index<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L158">Matrix/MatrixUtils.ts:158</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matrix: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> value: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> index: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="addvalueat" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add<wbr>Value<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Value<wbr>At<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, index<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L173">Matrix/MatrixUtils.ts:173</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> index: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="assertorder" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> assert<wbr>Order</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">assert<wbr>Order<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, b<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L111">Matrix/MatrixUtils.ts:111</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>b: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="clonematrix" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> clone<wbr>Matrix</h3>
@@ -110,7 +260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L109">Matrix/MatrixUtils.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L206">Matrix/MatrixUtils.ts:206</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -133,7 +283,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L113">Matrix/MatrixUtils.ts:113</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L210">Matrix/MatrixUtils.ts:210</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -156,7 +306,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L61">Matrix/MatrixUtils.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L62">Matrix/MatrixUtils.ts:62</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -173,6 +323,79 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="divide" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> divide</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">divide<span class="tsd-signature-symbol">(</span>matrix<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, scalar<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L91">Matrix/MatrixUtils.ts:91</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matrix: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>scalar: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="eachvector" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> each<wbr>Vector</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">each<wbr>Vector<span class="tsd-signature-symbol">(</span>matrix<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, operation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L179">Matrix/MatrixUtils.ts:179</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matrix: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>operation: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>vector<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>vector: <a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#vectortype" class="tsd-signature-type">VectorType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="extract" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> extract</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -182,7 +405,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L54">Matrix/MatrixUtils.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L55">Matrix/MatrixUtils.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -217,7 +440,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L87">Matrix/MatrixUtils.ts:87</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L184">Matrix/MatrixUtils.ts:184</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -237,6 +460,32 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fillvector" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> fill<wbr>Vector</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">fill<wbr>Vector<span class="tsd-signature-symbol">(</span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L135">Matrix/MatrixUtils.ts:135</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>size: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="identity" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> identity</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -246,7 +495,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L98">Matrix/MatrixUtils.ts:98</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L195">Matrix/MatrixUtils.ts:195</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -269,7 +518,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L18">Matrix/MatrixUtils.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L19">Matrix/MatrixUtils.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -286,13 +535,13 @@
 					<a name="multiply" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> multiply</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">multiply<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, b<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">multiply<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L70">Matrix/MatrixUtils.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L71">Matrix/MatrixUtils.ts:71</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -301,7 +550,59 @@
 									<h5>a: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>b: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>b: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="scalaroperation" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> scalar<wbr>Operation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">scalar<wbr>Operation<span class="tsd-signature-symbol">(</span>matrix<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, operation<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#scalaroperation" class="tsd-signature-type">ScalarOperation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L127">Matrix/MatrixUtils.ts:127</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matrix: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>operation: <a href="../modules/_matrix_types_.html#scalaroperation" class="tsd-signature-type">ScalarOperation</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="sub" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> sub</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">sub<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L103">Matrix/MatrixUtils.ts:103</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>b: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -318,7 +619,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/6137208/src/Matrix/MatrixUtils.ts#L6">Matrix/MatrixUtils.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L7">Matrix/MatrixUtils.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -328,6 +629,32 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="vectoroperation" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> vector<wbr>Operation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">vector<wbr>Operation<span class="tsd-signature-symbol">(</span>matrix<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, operation<span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#vectoroperation" class="tsd-signature-type">VectorOperation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/crushers-lab/bag/blob/c26b511/src/Matrix/MatrixUtils.ts#L119">Matrix/MatrixUtils.ts:119</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matrix: <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>operation: <a href="../modules/_matrix_types_.html#vectoroperation" class="tsd-signature-type">VectorOperation</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_matrix_types_.html#matrixtype" class="tsd-signature-type">MatrixType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -352,6 +679,21 @@
 						<a href="_matrix_matrixutils_.matrixutils.html" class="tsd-kind-icon">Matrix<wbr>Utils</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#add" class="tsd-kind-icon">add</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#addcolumn" class="tsd-kind-icon">add<wbr>Column</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#addrow" class="tsd-kind-icon">add<wbr>Row</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#addvalueat" class="tsd-kind-icon">add<wbr>Value<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#assertorder" class="tsd-kind-icon">assert<wbr>Order</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_matrix_matrixutils_.matrixutils.html#clonematrix" class="tsd-kind-icon">clone<wbr>Matrix</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -361,10 +703,19 @@
 								<a href="_matrix_matrixutils_.matrixutils.html#concat" class="tsd-kind-icon">concat</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#divide" class="tsd-kind-icon">divide</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#eachvector" class="tsd-kind-icon">each<wbr>Vector</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_matrix_matrixutils_.matrixutils.html#extract" class="tsd-kind-icon">extract</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_matrix_matrixutils_.matrixutils.html#fill" class="tsd-kind-icon">fill</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#fillvector" class="tsd-kind-icon">fill<wbr>Vector</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_matrix_matrixutils_.matrixutils.html#identity" class="tsd-kind-icon">identity</a>
@@ -376,7 +727,16 @@
 								<a href="_matrix_matrixutils_.matrixutils.html#multiply" class="tsd-kind-icon">multiply</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#scalaroperation" class="tsd-kind-icon">scalar<wbr>Operation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#sub" class="tsd-kind-icon">sub</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_matrix_matrixutils_.matrixutils.html#transpose" class="tsd-kind-icon">transpose</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_matrix_matrixutils_.matrixutils.html#vectoroperation" class="tsd-kind-icon">vector<wbr>Operation</a>
 							</li>
 						</ul>
 					</li>

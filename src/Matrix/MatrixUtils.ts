@@ -1,6 +1,7 @@
+import _ from "lodash";
 import {clone} from "../Collection/ICloneable";
 import Matrix from "./Matrix";
-import {MatrixType, VectorType} from "./types";
+import {MatrixType, ScalarOperation, VectorOperation, VectorType} from "./types";
 
 class MatrixUtils {
     public static transpose(matrix: MatrixType<any>): MatrixType<any> {
@@ -67,7 +68,10 @@ class MatrixUtils {
         return a.map((vector: VectorType<any>, index: number) => [...vector, ...b[index]]);
     }
 
-    public static multiply(a: MatrixType<number>, b: MatrixType<number>): MatrixType<number> {
+    public static multiply(a: MatrixType<number>, b: number | MatrixType<number>): MatrixType<number> {
+        if (_.isNumber(b)) {
+            return this.scalarOperation(a, (value) => value * b);
+        }
         const [m, n] = Matrix.getOrder(a);
         const [p, q] = Matrix.getOrder(b);
         if (n !== p) {
@@ -82,6 +86,99 @@ class MatrixUtils {
             }
         }
         return c;
+    }
+
+    public static divide(matrix: MatrixType<number>, scalar: number): MatrixType<number> {
+        return this.scalarOperation(matrix, (value: number) => value / scalar);
+    }
+
+    public static add(a: MatrixType<number>, b: number | MatrixType<number>): MatrixType<number> {
+        if (_.isNumber(b)) {
+            return this.scalarOperation(a, (value: number) => value + b);
+        }
+        this.assertOrder(a, b);
+        return this.vectorOperation(a, (value, i, j) => value + b[i][j]);
+    }
+
+    public static sub(a: MatrixType<number>, b: number | MatrixType<number>): MatrixType<number> {
+        if (_.isNumber(b)) {
+            return this.scalarOperation(a, (value: number) => value - b);
+        }
+        this.assertOrder(a, b);
+        return this.vectorOperation(a, (value, i, j) => value - b[i][j]);
+    }
+
+    public static assertOrder(a: MatrixType<any>, b: MatrixType<any>) {
+        const [m, n] = Matrix.getOrder(a);
+        const [p, q] = Matrix.getOrder(b);
+        if (m !== p || n !== q) {
+            throw new Error("Order mismatch during addition of matrix");
+        }
+    }
+
+    public static vectorOperation(matrix: MatrixType<number>, operation: VectorOperation): MatrixType<number> {
+        return matrix.map(
+            (vector: VectorType<number>, i: number) => vector.map(
+                (value: number, j: number) => operation(value, i, j),
+            ),
+        );
+    }
+
+    public static scalarOperation(matrix: MatrixType<number>, operation: ScalarOperation): MatrixType<number> {
+        return matrix.map(
+            (vector: VectorType<number>) => vector.map(
+                (value: number) => operation(value),
+            ),
+        );
+    }
+
+    public static fillVector(size: number, value: any): any[] {
+        const array = [];
+        for (let i = 0; i < size; i++) {
+            array.push(value);
+        }
+        return array;
+    }
+
+    public static addColumn(matrix: MatrixType<number>, value: number | VectorType<number> = 1,
+                            index: number = 0): MatrixType<number> {
+        let vector: number[] = [];
+        const [m] = Matrix.getOrder(matrix);
+        if (_.isNumber(value)) {
+            vector = this.fillVector(m, value);
+        } else {
+            if (m !== value.length) {
+                throw new Error("Vector length should be same as m of matrix");
+            }
+            vector = [...value];
+        }
+        return this.eachVector(matrix, (v, i) => this.addValueAt(v, vector[i], index));
+    }
+
+    public static addRow(matrix: MatrixType<number>, value: number | VectorType<number> = 1,
+                         index: number = 0): MatrixType<number> {
+        let vector: number[] = [];
+        const n = Matrix.getOrder(matrix)[1];
+        if (_.isNumber(value)) {
+            vector = this.fillVector(n, value);
+        } else {
+            if (n !== value.length) {
+                throw new Error("Vector length should be same as n of matrix");
+            }
+            vector = [...value];
+        }
+        return this.addValueAt(matrix, vector, index);
+    }
+
+    public static addValueAt(source: any[], value: any, index: number = 0) {
+        const start = source.slice(0, index);
+        const end = source.slice(index, source.length);
+        return [...start, value, ...end];
+    }
+
+    public static eachVector(matrix: MatrixType<number>,
+                             operation: (vector: VectorType<number>, index: number) => VectorType<number>) {
+        return matrix.map((vector: VectorType<number>, index: number) => operation(vector, index));
     }
 
     public static fill(m: number, n: number, num: any): MatrixType<any> {
